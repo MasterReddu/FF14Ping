@@ -14,7 +14,8 @@ namespace FF14Ping
 {
     public partial class FFPing : Form
     {
-
+        #region Form Movement  
+        //Allows form to be dragged around even when controls arent showing
         private bool IsDrag = false;
         private Point startPoint = new Point(0,0);
         private void FFPing_MouseDown(object sender, MouseEventArgs e)
@@ -34,18 +35,25 @@ namespace FF14Ping
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
+        #endregion
 
-
+        //Initialise Location Data
+        int SavedLocationX = 0;
+        int SavedLocationY = 0;
 
         public FFPing()
         {
             InitializeComponent();
-        }
-
-        
+                    }
 
         private void FFPing_Load(object sender, EventArgs e)
         {
+            //Load Previous Location Data
+            SavedLocationX = Properties.Settings.Default.SavedLocationX;
+            SavedLocationY = Properties.Settings.Default.SavedLocationY;
+            Location = new Point(SavedLocationX, SavedLocationY);
+
+
             // To update the first time.
             Ping();
             //Tick-tock on the clock
@@ -58,10 +66,6 @@ namespace FF14Ping
             myTimer.Start();
         }
 
-
-
-
-
         private void Ping()
         //Ping the Tonberry Server and toss it in the label
         {
@@ -73,8 +77,15 @@ namespace FF14Ping
 
         private void label1_Click(object sender, EventArgs e)
         {
+            SavedLocationX = this.Location.X;
+            SavedLocationY = this.Location.Y;
+            Properties.Settings.Default.SavedLocationX = SavedLocationX;
+            Properties.Settings.Default.SavedLocationY = SavedLocationY;
+            Properties.Settings.Default.Save();
             Application.Exit();
         }
+
+
     }
 }
 
