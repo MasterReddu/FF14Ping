@@ -6,6 +6,8 @@ A Simple program that acts as an overlay and shows ping (for now to Tonberry ser
 Please note, it needs FFXIV to be in windowed or borderless windowed mode to work.  
 You can use it with fullscreen, it just won't show ontop of the game.
 
+## Download
+Download latest release here: [FFXIV Ping-v1.0-alpha](https://github.com/MasterReddu/FF14Ping/releases/download/v1.0-alpha/FF14Ping.exe)
 
 ## Getting Started
 
