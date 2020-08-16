@@ -35,11 +35,13 @@ namespace FF14Ping
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
-        #endregion
 
         //Initialise Location Data
-        int SavedLocationX = 0;
-        int SavedLocationY = 0;
+        int SavedLocationX = Properties.Settings.Default.SavedLocationX;
+        int SavedLocationY = Properties.Settings.Default.SavedLocationY;
+        #endregion
+
+
 
         public FFPing()
         {
@@ -48,9 +50,6 @@ namespace FF14Ping
 
         private void FFPing_Load(object sender, EventArgs e)
         {
-            //Load Previous Location Data
-            SavedLocationX = Properties.Settings.Default.SavedLocationX;
-            SavedLocationY = Properties.Settings.Default.SavedLocationY;
             Location = new Point(SavedLocationX, SavedLocationY);
 
 
