@@ -9,7 +9,10 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="SavedBackColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">Transparent</Value>
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="MyServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">124.150.157.24</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -39,6 +39,7 @@ namespace FF14Ping
         //Initialise Location Data
         int SavedLocationX = Properties.Settings.Default.SavedLocationX;
         int SavedLocationY = Properties.Settings.Default.SavedLocationY;
+        string MyServer = Properties.Settings.Default.MyServer;
         #endregion
 
 
@@ -50,6 +51,7 @@ namespace FF14Ping
 
         private void FFPing_Load(object sender, EventArgs e)
         {
+            this.BackColor = Color.Black;
             Location = new Point(SavedLocationX, SavedLocationY);
 
 
@@ -65,12 +67,14 @@ namespace FF14Ping
             myTimer.Start();
         }
 
+        
+
         private void Ping()
         //Ping the Tonberry Server and toss it in the label
         {
             using (Ping p = new Ping())
             {
-                lblLatency.Text = p.Send("124.150.157.24").RoundtripTime.ToString() + "ms";
+                lblLatency.Text = p.Send(MyServer).RoundtripTime.ToString() + "ms";
             }
         }
 
@@ -94,7 +98,12 @@ namespace FF14Ping
 
         public void ChangeMeColor(Color clr)
         {
-            this.BackColor = clr;
+            lblLatency.BackColor = clr;
+        }
+
+        public void ChangeServer(string thisServer)
+        {
+            MyServer = thisServer;
         }
 
 

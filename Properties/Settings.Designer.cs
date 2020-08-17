@@ -49,13 +49,25 @@ namespace FF14Ping.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
         public global::System.Drawing.Color SavedBackColor {
             get {
                 return ((global::System.Drawing.Color)(this["SavedBackColor"]));
             }
             set {
                 this["SavedBackColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("124.150.157.24")]
+        public string MyServer {
+            get {
+                return ((string)(this["MyServer"]));
+            }
+            set {
+                this["MyServer"] = value;
             }
         }
     }

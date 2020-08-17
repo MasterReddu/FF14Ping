@@ -54,7 +54,7 @@
             // 
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.Location = new System.Drawing.Point(103, -1);
+            this.lblExit.Location = new System.Drawing.Point(86, 1);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(14, 16);
             this.lblExit.TabIndex = 1;
@@ -64,7 +64,7 @@
             // lblSettings
             // 
             this.lblSettings.AutoSize = true;
-            this.lblSettings.Location = new System.Drawing.Point(103, 27);
+            this.lblSettings.Location = new System.Drawing.Point(86, 24);
             this.lblSettings.Name = "lblSettings";
             this.lblSettings.Size = new System.Drawing.Size(14, 13);
             this.lblSettings.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = global::FF14Ping.Properties.Settings.Default.SavedBackColor;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(129, 42);
             this.Controls.Add(this.lblSettings);
             this.Controls.Add(this.lblExit);
