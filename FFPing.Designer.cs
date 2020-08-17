@@ -33,6 +33,7 @@
             this.myTimer = new System.Windows.Forms.Timer(this.components);
             this.lblLatency = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
+            this.lblSettings = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLatency
@@ -60,15 +61,27 @@
             this.lblExit.Text = "x";
             this.lblExit.Click += new System.EventHandler(this.label1_Click);
             // 
+            // lblSettings
+            // 
+            this.lblSettings.AutoSize = true;
+            this.lblSettings.Location = new System.Drawing.Point(103, 27);
+            this.lblSettings.Name = "lblSettings";
+            this.lblSettings.Size = new System.Drawing.Size(14, 13);
+            this.lblSettings.TabIndex = 2;
+            this.lblSettings.Text = "o";
+            this.lblSettings.Click += new System.EventHandler(this.lblSettings_Click);
+            // 
             // FFPing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = global::FF14Ping.Properties.Settings.Default.SavedBackColor;
             this.ClientSize = new System.Drawing.Size(129, 42);
+            this.Controls.Add(this.lblSettings);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblLatency);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("BackColor", global::FF14Ping.Properties.Settings.Default, "SavedBackColor", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -91,6 +104,7 @@
         private System.Windows.Forms.Timer myTimer;
         private System.Windows.Forms.Label lblLatency;
         private System.Windows.Forms.Label lblExit;
+        private System.Windows.Forms.Label lblSettings;
     }
 }
 

@@ -46,7 +46,7 @@ namespace FF14Ping
         public FFPing()
         {
             InitializeComponent();
-                    }
+        }
 
         private void FFPing_Load(object sender, EventArgs e)
         {
@@ -76,12 +76,25 @@ namespace FF14Ping
 
         private void label1_Click(object sender, EventArgs e)
         {
+            //Save data and exit when the little x is clicked
             SavedLocationX = this.Location.X;
             SavedLocationY = this.Location.Y;
             Properties.Settings.Default.SavedLocationX = SavedLocationX;
             Properties.Settings.Default.SavedLocationY = SavedLocationY;
             Properties.Settings.Default.Save();
             Application.Exit();
+        }
+
+        private void lblSettings_Click(object sender, EventArgs e)
+        {
+
+            new FFUserSettings().Show();
+            this.Hide();
+        }
+
+        public void ChangeMeColor(Color clr)
+        {
+            this.BackColor = clr;
         }
 
 

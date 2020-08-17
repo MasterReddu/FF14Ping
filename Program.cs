@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,8 @@ namespace FF14Ping
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Change Startup form!!! w(ﾟДﾟ)w
+            //Application.Run(new FFPing());
             Application.Run(new FFPing());
         }
     }

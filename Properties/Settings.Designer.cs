@@ -49,13 +49,13 @@ namespace FF14Ping.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string FontColor {
+        [global::System.Configuration.DefaultSettingValueAttribute("Transparent")]
+        public global::System.Drawing.Color SavedBackColor {
             get {
-                return ((string)(this["FontColor"]));
+                return ((global::System.Drawing.Color)(this["SavedBackColor"]));
             }
             set {
-                this["FontColor"] = value;
+                this["SavedBackColor"] = value;
             }
         }
     }
